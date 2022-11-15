@@ -1,0 +1,6 @@
+{
+  "properties": {
+    "rest.path": "/api",
+    "rest.packages": "org.apache.karaf.minho.examples.k8s.controller"
+  }
+}
