@@ -60,4 +60,32 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+                <targetPath>${project.build.outputDirectory}</targetPath>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.karaf.minho.tooling</groupId>
+                <artifactId>minho-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>build-runtime</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                        <configuration>
+                            <minhoBuild>${project.build.outputDirectory}/minho-build.json</minhoBuild>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
