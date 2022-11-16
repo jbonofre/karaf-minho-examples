@@ -1,0 +1,15 @@
+{
+  "name": "minho-contorller",
+  "properties": {
+    "base.directory": "target/runtime/minho-controller",
+    "include.transitive": true
+  },
+  "dependencies": [
+    "minho:minho-boot",
+    "minho:minho-banner",
+    "minho:minho-http",
+    "minho:minho-rest",
+    "mvn:org.apache.karaf.minho.examples/minho-example-k8s-controller/1.0-SNAPSHOT",
+    "file:src/main/resources/minho.json"
+  ]
+}
