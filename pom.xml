@@ -34,6 +34,11 @@
             </dependency>
             <dependency>
                 <groupId>org.apache.karaf.minho</groupId>
+                <artifactId>minho-config-json</artifactId>
+                <version>${minho.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.karaf.minho</groupId>
                 <artifactId>minho-http</artifactId>
                 <version>${minho.version}</version>
             </dependency>

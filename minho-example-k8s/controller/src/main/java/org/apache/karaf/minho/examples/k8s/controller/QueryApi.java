@@ -14,4 +14,11 @@ public class QueryApi {
         return "Hello";
     }
 
+    @GET
+    @Path("/health")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String health() {
+        return "ready";
+    }
+
 }
