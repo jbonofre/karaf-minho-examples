@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: minho
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minho-controller
+  namespace: minho
+spec:
+  selector:
+    matchLabels:
+      app: minho-controller
+  template:
+    metadata:
+      labels:
+        app: minho-controller
+    spec:
+      containers:
+      - name: minho-controller
+        image: minho-controller:1.0-SNAPSHOT
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: minho-controller
+  namespace: minho
+spec:
+  selector:
+    app: minho-controller
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
